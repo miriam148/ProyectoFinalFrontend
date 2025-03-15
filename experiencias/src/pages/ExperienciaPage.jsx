@@ -1,6 +1,6 @@
 const ExperienciaPage = () => {
     return (
-     
+     <div></div>
     );
   };
   
