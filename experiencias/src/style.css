@@ -1,0 +1,129 @@
+/* Estilos para LandingPage */
+.landing-container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .landing-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color:  #D84040;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #EFB036;
+    color: white;
+  }
+  
+  /* Media Query para pantallas más grandes */
+  @media (min-width: 768px) {
+    .landing-buttons {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .btn-primary, .btn-secondary {
+      width: 200px;
+    }
+  }
+  
+  /* Estilos para la página de login */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .login-input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .login-button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #626F47;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .login-error {
+    color: #F93827 ;
+    margin-top: 10px;
+  }
+  
+
+  /* Estilos para la página de registro */
+.register-container {
+  max-width: 90%;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #EFB036;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.register-error {
+  color: #F93827;
+  margin-top: 10px;
+}
+
+.register-success {
+  color: #3E7B27;
+  margin-top: 10px;
+}
+/* Media Query para pantallas grandes */
+@media (min-width: 768px) {
+  .register-container {
+    max-width: 400px;
+  }
+}
