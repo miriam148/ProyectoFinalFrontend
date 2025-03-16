@@ -1,11 +1,9 @@
-import React from 'react'
-
 const FooterComponent = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <footer className="footer">
+      <p>© 2025 Experiencias de Viaje - Todos los derechos reservados</p>
+    </footer>
+  );
+};
 
-export default FooterComponent
+export default FooterComponent;

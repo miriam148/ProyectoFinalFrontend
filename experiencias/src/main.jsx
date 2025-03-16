@@ -8,3 +8,5 @@ createRoot(document.getElementById('root')).render(
     <App />
   </AuthProvider>,
 )
+/*AuthProvider lo ponemos aqui para que envuelva toda la app y desde cualquier punto los componentes pueden
+usar el useContext AuthProvider */

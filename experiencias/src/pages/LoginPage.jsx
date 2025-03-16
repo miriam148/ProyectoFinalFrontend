@@ -10,14 +10,14 @@ const LoginPage = () => {
   const [password, setPassword] = useState(""); // manejan los estados y los guardan
   const [error, setError] = useState(null); // manejan los estados y los guardan
   const navigate = useNavigate(); //para que te redirija si es ok 
-  const { login } = useContext(AuthContext); // guarda tokens y user
+  const { login } = useContext(AuthContext); // guarda tokens y user(viene de authcontext)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null); // Limpiar error anterior
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", { //a mi endpoint del back
+      const response = await fetch("http://localhost:3000/api/auth/login", { //llama al back
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -28,7 +28,7 @@ const LoginPage = () => {
       if (!response.ok) { //manejo de errores
         throw new Error(data.message || "Error en el inicio de sesión");
       }
-
+//login viene de authContext
       login(data.user, data.token, data.token_refresh); //console.log(data.token) Guardar usuario con los dos token 
       navigate("/home"); // Redirigir a Home después de iniciar sesión
     } catch (error) {

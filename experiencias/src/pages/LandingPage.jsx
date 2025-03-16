@@ -7,17 +7,18 @@ import "../style.css";
 const LandingPage = () => {
   return (
     <div className="landing-container">
-      <h1>El viaje de tu vida</h1>
+      <h1>Llena tu vida de aventuras</h1>
       <p>Una guía completa sobre lugares y rutas que no te dejarán indiferente</p>
-      <p>Únete, comparte y descubre los viajes que han sido o serán inolvidables</p>
-      <div className="landing-buttons">
+      <p>Únete, comparte y descubre experiencias de viaje únicas alrededor del mundo </p>
+      {/* <div className="landing-buttons">
         <Link to="/login">
           <button className="btn-primary">Iniciar sesión</button>
         </Link>
         <Link to="/register">
           <button className="btn-secondary">Registrarse</button>
         </Link>
-      </div>
+      </div> */}
+      <img src="/images/Miriam.jpg" alt="Foto portada" className="landing-img" />
     </div>
   );
 };

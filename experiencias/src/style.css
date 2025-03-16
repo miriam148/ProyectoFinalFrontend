@@ -1,5 +1,24 @@
+ :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ 
+
+
+
 /* Estilos para LandingPage */
-.landing-container {
+/* .landing-container {
     max-width: 90%;
     margin: auto;
     text-align: center;
@@ -22,17 +41,17 @@
   }
   
   .btn-primary {
-    background-color:  #D84040;
+    background-color:  #626F47;
     color: white;
   }
   
   .btn-secondary {
-    background-color: #EFB036;
+    background-color: #626F47;
     color: white;
   }
   
   /* Media Query para pantallas más grandes */
-  @media (min-width: 768px) {
+  /* @media (min-width: 768px) {
     .landing-buttons {
       flex-direction: row;
       justify-content: center;
@@ -41,7 +60,36 @@
     .btn-primary, .btn-secondary {
       width: 200px;
     }
+  } */ 
+
+
+
+  .landing-container {
+    text-align: center;
+    padding: 50px 20px;
   }
+  
+  .landing-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .landing-container h1 {
+    font-size: 28px;
+    color: #FADA7A;
+    margin-bottom: 10px;
+  }
+  
+  .landing-container p {
+    font-size: 18px;
+    color: #FFF7D1;
+  }
+  
+
+
+
   
   /* Estilos para la página de login */
 .login-container {
@@ -104,7 +152,7 @@
 .register-button {
   padding: 12px;
   font-size: 18px;
-  background-color: #EFB036;
+  background-color: #626F47;
   color: white;
   border: none;
   border-radius: 5px;
@@ -126,4 +174,252 @@
   .register-container {
     max-width: 400px;
   }
+}
+
+/* Estilos para HomePage */
+.home-container {
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+  color: #FADA7A;
+  
+}
+.home-container p {
+  color: #FFF7D1;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.home-buttons button {
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #E16A54;
+  color: white;
+}
+
+
+
+/* Media Query para pantallas grandes */
+@media (min-width: 768px) {
+  .home-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .home-buttons button {
+    width: 200px;
+  }
+}
+
+
+
+/* Contenedor principal */
+.experiencia-container {
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Botón de crear experiencia y volver */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.crear-btn,
+.volver-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #E16A54;
+  color: white;
+  transition: background 0.3s;
+  min-width: 150px;
+}
+
+
+/* Lista de experiencias */
+.experiencia-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Tarjeta de experiencia */
+.experiencia-card {
+  background: #FFBF61;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón de detalles */
+.detalles-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #E16A54;
+  color: white;
+}
+
+
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+  .experiencia-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .experiencia-card {
+    width: 45%;
+  }
+}
+
+
+/*  HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #9F5255;
+  color: white;
+}
+
+.header h1 {
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.header nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.header nav button:hover {
+  text-decoration: underline;
+}
+
+/*  FOOTER */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Contenedor principal */
+.crear-experiencia-container {
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* Estilo del formulario */
+.crear-experiencia-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.crear-experiencia-form input,
+.crear-experiencia-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.crear-experiencia-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Botones */
+.botones-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.crear-btn, .volver-btn {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #E16A54;
+}
+
+
+/* Estilos de error */
+.error-message {
+  color: #F93827;
+  font-weight: bold;
+}
+
+
+/*  Estilos contacto*/
+.contacto-container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #F1F3C2;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contacto-container p {
+  color: #7C444F;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.contacto-container a {
+  color: #7C444F;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacto-container a:hover {
+  text-decoration: underline;
 }

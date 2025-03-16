@@ -10,6 +10,7 @@ import ContactoComponent from "./components/ContactoComponent";
 import HeaderComponent from "./components/HeaderComponent";
 import FooterComponent from "./components/FooterComponent";
 import PrivateComponent from "./components/PrivateComponent";
+import CrearExperienciaComponent from "./components/CrearExperienciaComponent";
 import './App.css'
 
 function App() {
@@ -26,7 +27,8 @@ function App() {
          <Route path="/home" element={<HomePage />} />
         <Route path="/perfil" element={<PerfilPage />} />
         <Route path="/experiencias" element={<ExperienciaPage />} />
-        <Route path="/contacto" element={<ContactoComponent />} />
+        <Route path="/quienes-somos" element={<ContactoComponent />} />
+         <Route path="/crear-experiencia" element={<CrearExperienciaComponent/>}/>
          </Route>
         
       </Routes>
