@@ -18,7 +18,7 @@ const LandingPage = () => {
           <button className="btn-secondary">Registrarse</button>
         </Link>
       </div> */}
-      <img src="/images/Miriam.jpg" alt="Foto portada" className="landing-img" />
+      <img src="/images/imagenDos.jpg" alt="Foto portada" className="landing-img" />
     </div>
   );
 };

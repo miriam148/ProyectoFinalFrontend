@@ -26,7 +26,7 @@ guardamos en user y token. solo para mantener la sesion abierta, pq gestionamos 
     localStorage.setItem("token", accessToken); //ESTOS 3 SE GUSRDAN EN EL LOCALSTORAGE
     localStorage.setItem("refreshToken", refreshToken);
   };
-//PARA EL LOGOUT DONDE LA USE QUE AÚN NO SÉ DND LA VOY A PONER 
+//PARA EL LOGOUT EN HEADER
   const logout = () => {
     setUser(null);//ELIMINA DE ESTADO GLOBAL LOS DATOS
     setToken(null);//ELIMINA DE ESTADO GLOBAL
