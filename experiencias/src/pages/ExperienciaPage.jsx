@@ -9,7 +9,7 @@ const ExperienciaPage = () => {
   useEffect(() => {
     const fetchExperiencias = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/experience");
+        const response = await fetch("http://localhost:3001/api/experience");
         const data = await response.json();
         setExperiencias(data);
       } catch (error) {
