@@ -17,7 +17,7 @@ const LoginPage = () => {
     setError(null); // Limpiar error anterior
 
     try {
-      const response = await fetch("http://localhost:3001/api/auth/login", { //llama al back
+      const response = await fetch("http://localhost:3001/api/auth/login", { //llama al back con el endpoint que he creado
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

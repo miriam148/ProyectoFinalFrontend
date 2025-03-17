@@ -34,7 +34,7 @@ const CrearExperienciaComponent = () => {
         return
       }
 
-      const response = await fetch("http://localhost:3000/api/experience", {
+      const response = await fetch("http://localhost:3001/api/experience", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
