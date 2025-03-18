@@ -12,7 +12,8 @@ import FooterComponent from "./components/FooterComponent";
 import PrivateComponent from "./components/PrivateComponent";
 import CrearExperienciaComponent from "./components/CrearExperienciaComponent";
 import DetalleExperinciaPage from "./pages/DetalleExperinciaPage";
-import './App.css'
+import './App.css';
+import EditarExperienciaPage from "./pages/EditarExperienciaPage";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
-         {/* Rutas privadas protegidas */}
+         {/* Rutas privadas protegidas, las envuelvo por el privateComponent */}
          <Route element={<PrivateComponent/>}>
          <Route path="/home" element={<HomePage />} />
         <Route path="/perfil" element={<PerfilPage />} />
@@ -31,6 +32,8 @@ function App() {
         <Route path="/quienes-somos" element={<ContactoComponent />} />
          <Route path="/crear-experiencia" element={<CrearExperienciaComponent/>}/>
          <Route path="/experiencia/:id" element={<DetalleExperinciaPage/>}/>
+         <Route path="/editar-experiencia/:id" element={<EditarExperienciaPage/>}/>
+
          </Route>
         
       </Routes>

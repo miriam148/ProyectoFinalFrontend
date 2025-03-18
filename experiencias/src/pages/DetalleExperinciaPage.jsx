@@ -11,7 +11,7 @@ const DetalleExperinciaPage = () => {
   const [error, setError] = useState(null);
 
 
-//para cargar la experiencia con el id
+//para cargar la experiencia con el id (si hago logout me vuelve a funcionar) NO ME FUNCIONA EL REFRESH TOKEN !!!
 useEffect(() => {
     const fetchExperiencia = async () => {
       try {
@@ -19,16 +19,16 @@ useEffect(() => {
   if (!token) {
     setError('Inicia sesión para editar experiencia')
   }
-  if (!id || id.length !== 24) { //verificacion de id pq me esta dando problemas
+  if (!id || id.length !== 24) { //verificacion de id pq me esta dando problemas(ok)
     setError("ID de experiencia inválido");
     return;
   }
   
-        const response = await fetch(`http://localhost:3001/api/experience/${id}`, {
+        const response = await fetch(`http://localhost:3001/api/experience/${id}`, {   
           method: "GET",
           headers: {
             "Content-Type": "application/json",
-            "Auth-token": token, //Enviar el token
+            "auth-token": token, //Enviar el token
           },
         });
   
@@ -56,7 +56,7 @@ useEffect(() => {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
-            "Auth-token": token, //Enviar el token
+            "auth-token": token, //Enviar el token
           },
       });
       if (!response.ok) throw new Error("Solo puedes eliminar tus experiencias");
@@ -67,9 +67,9 @@ useEffect(() => {
     }
   };
 
-  //  Redirigir a la página de edición cuando la cree
+  //  Redirigir a la página de edición
   const handleEdit = () => {
-    navigate();
+    navigate(`/editar-experiencia/${id}`);
   };
 
   //  cancela y vuelves atrás
@@ -83,7 +83,7 @@ useEffect(() => {
   if (!experiencia) return <p>No se encontró la experiencia.</p>;
 
 
-//VER PQ ME COGE USUARIO DESCONOCIDO EN VEZ DEL USUARIO 
+//VER PQ ME COGE USUARIO DESCONOCIDO EN VEZ DEL USUARIO (.POPULATE EN BACK NAME: USER ME DEVUELVE NOMBRE PQ EN MONGODB HAY ID DEL USER)
 
   return (
     <div className="detalle-container">
@@ -93,7 +93,7 @@ useEffect(() => {
       <p><strong>Fecha:</strong> {new Date(experiencia.date).toLocaleDateString()}</p>
       {experiencia.image && <img src={experiencia.image} alt={experiencia.title} className="detalle-img" />}
       
-     {/* {experiencia.user && <p><strong>Publicado por:</strong> {experiencia.user.name || "Usuario desconocido"}</p>} */}
+     {experiencia.user && <p><strong>Publicado por:</strong> {experiencia.user.name || "Usuario desconocido"}</p>}
       
       <div className="botones-container">
         <button className="editar-btn" onClick={handleEdit}>✏️ Editar</button>

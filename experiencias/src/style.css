@@ -220,7 +220,7 @@
   }
 }
 
-
+/* LISTA DE EXPERIENCIAS*/
 
 /* Contenedor principal */
 .experiencia-container {
@@ -267,6 +267,7 @@
   width: 100%;
   max-width: 400px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  color: #758694
 }
 
 /* Botón de detalles */
@@ -335,6 +336,9 @@
   width: 100%;
 }
 
+
+/* CREAR-EXPERIENCIA*/
+
 /* Contenedor principal */
 .crear-experiencia-container {
   max-width: 90%;
@@ -391,9 +395,9 @@
 }
 
 
-/*  Estilos contacto*/
+/*  Estilos pantalla contacto*/
 .contacto-container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 50px auto;
   text-align: center;
   padding: 20px;
@@ -410,7 +414,7 @@
 
 .contacto-container p {
   color: #7C444F;
-  font-size: 18px;
+  font-size: 20px;
   margin: 10px 0;
 }
 
@@ -424,6 +428,15 @@
   text-decoration: underline;
 }
 
+.iconos-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
 
 /* pantalla editar */
 
@@ -432,7 +445,7 @@
   margin: auto;
   padding: 20px;
   text-align: center;
-  background: #fff;
+  background: #FFBF61;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   color:#242424
@@ -460,3 +473,86 @@
 .editar-btn { background-color: #E16A54; color: white; }
 .eliminar-btn { background-color: #E16A54; color: white; }
 .cancelar-btn { background-color: #E16A54; color: white; }
+
+
+
+
+/*EditarExperienciaPage*/
+
+.editar-experiencia-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.editar-experiencia-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.editar-experiencia-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.editar-experiencia-container label {
+  font-weight: bold;
+}
+
+.editar-experiencia-container input,
+.editar-experiencia-container textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.editar-experiencia-container textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.editar-experiencia-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #E16A54;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.editar-experiencia-container button[type="button"] {
+  background-color: #E16A54;
+}
+
+.error-message {
+  color: #F93827;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+  .editar-experiencia-container {
+    max-width: 600px;
+    padding: 40px;
+  }
+
+  .editar-experiencia-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .editar-experiencia-container input,
+  .editar-experiencia-container textarea {
+    font-size: 1.1rem;
+  }
+
+  .editar-experiencia-container button {
+    font-size: 1.1rem;
+    padding: 12px;
+  }
+}
