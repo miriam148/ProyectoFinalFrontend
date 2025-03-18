@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
+
 //página para editar la experiencia 
 
 const EditarExperienciaPage = () => {
@@ -44,6 +45,8 @@ const EditarExperienciaPage = () => {
     fetchExperiencia();
   }, [id]);
 
+  
+//SOLO EDITA EL CREADOR DE LA EXPERIENCIA 
   /*Manejo de cambios en el formulario, con la copia de lo que no se modifica (...experiencia) y solo cambia el valor del campo nombre
    (title/location/description, etc) y se setea
    NOTA: en el mismo input al final readOnly para que no se pueda editar un campo, tambien en un <p></p> */
@@ -70,7 +73,7 @@ const EditarExperienciaPage = () => {
         body: JSON.stringify(experiencia),
       });
 
-      if (!response.ok) throw new Error("Error al actualizar la experiencia.");
+      if (!response.ok) throw new Error("Solo el creador de la experiencia puede editarla");
 
       navigate(`/experiencia/${id}`); // Volver a la página de detalles
     } catch (err) {
@@ -82,7 +85,7 @@ const EditarExperienciaPage = () => {
     <div className="editar-experiencia-container">
       <h1>Editar Experiencia</h1>
       {error && <p className="error-message">{error}</p>}
-      <form onSubmit={handleSubmit}>
+      <form className="form-container" onSubmit={handleSubmit}>
         <label>Título:</label>
         <input type="text" name="title" value={experiencia.title} onChange={handleChange} required />
 

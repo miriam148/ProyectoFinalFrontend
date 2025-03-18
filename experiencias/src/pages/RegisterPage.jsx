@@ -51,6 +51,9 @@ const RegisterPage = () => {
       setError(error.message);
     }
   };
+  const handlerBack = () => {
+   navigate("/")
+  }
 
   //el input de checkbox no usa value sino checked, ni placeholder y con label se mejora accesibilidad, lo puede clickar fuera de la casilla
 
@@ -116,6 +119,9 @@ const RegisterPage = () => {
         </label>
         <button type="submit" className="register-button">
           Registrarse
+        </button>
+        <button  onClick={handlerBack} type="submit" className="register-button">
+          Volver
         </button>
       </form>
       {error && <p className="register-error">{error}</p>}

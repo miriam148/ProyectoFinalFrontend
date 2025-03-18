@@ -14,6 +14,7 @@ import CrearExperienciaComponent from "./components/CrearExperienciaComponent";
 import DetalleExperinciaPage from "./pages/DetalleExperinciaPage";
 import './App.css';
 import EditarExperienciaPage from "./pages/EditarExperienciaPage";
+import EditarPerfilPage from "./pages/EditarPerfilPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
          <Route path="/crear-experiencia" element={<CrearExperienciaComponent/>}/>
          <Route path="/experiencia/:id" element={<DetalleExperinciaPage/>}/>
          <Route path="/editar-experiencia/:id" element={<EditarExperienciaPage/>}/>
+         <Route path="/editar-perfil" element={<EditarPerfilPage/>}/>
 
          </Route>
         

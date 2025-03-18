@@ -333,6 +333,7 @@
   color: white;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -395,7 +396,7 @@
 }
 
 
-/*  Estilos pantalla contacto*/
+/*  ESTILOS PANTALLA CONTACTO */
 .contacto-container {
   max-width: 700px;
   margin: 50px auto;
@@ -403,20 +404,21 @@
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #F1F3C2;
+  background-color: #FFBF61;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contacto-container h1 {
   color: #333;
   margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .contacto-container p {
   color: #7C444F;
-  font-size: 20px;
-  margin: 10px 0;
-}
+  font-size: 30px;
+  margin: 30px;
+} 
 
 .contacto-container a {
   color: #7C444F;
@@ -424,21 +426,33 @@
   font-weight: bold;
 }
 
-.contacto-container a:hover {
-  text-decoration: underline;
-}
 
 .iconos-container {
   display: flex;
   gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
+.volver-btn-contacto {
+ 
+  padding: 10px 15px;
+  font-size: 15px;
+  border: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: #E16A54;
+}
+ .button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+ }
 
 
-/* pantalla editar */
+/* pantalla DETALLE editar */
 
 .detalle-container {
   max-width: 600px;
@@ -480,9 +494,10 @@
 /*EditarExperienciaPage*/
 
 .editar-experiencia-container {
-  padding: 20px;
+  /* padding: px; */
   margin: 0 auto;
   max-width: 400px;
+
 }
 
 .editar-experiencia-container h1 {
@@ -535,6 +550,7 @@
   margin-bottom: 10px;
 }
 
+
 /* Media query para pantallas grandes */
 @media (min-width: 768px) {
   .editar-experiencia-container {
@@ -554,5 +570,157 @@
   .editar-experiencia-container button {
     font-size: 1.1rem;
     padding: 12px;
+  }
+}
+
+
+
+/* PÁGINA DE PERFIL  */
+
+.perfil-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.perfil-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.perfil-container p {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.perfil-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.editar-btn, .eliminar-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.editar-btn {
+  background-color: #E16A54;
+  color: white;
+}
+
+.editar-btn:hover {
+  background-color: #E16A54;
+}
+
+.eliminar-btn {
+  background-color: #E16A54;
+  color: white;
+}
+
+.eliminar-btn:hover {
+  background-color: #E16A54;
+}
+
+/* Media query para pantallas más grandes */
+@media (min-width: 768px) {
+  .perfil-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .perfil-botones {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .editar-btn, .eliminar-btn {
+    width: auto;
+  }
+}
+
+
+
+/*PÁGINA DE EDITAR PERFIL */
+
+
+/* CSS para EditarPerfilPage - Mobile First */
+
+.editar-perfil-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.editar-perfil-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.editar-perfil-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.editar-perfil-form input[type="text"],
+.editar-perfil-form input[type="email"],
+.editar-perfil-form input[type="date"],
+.editar-perfil-form input[type="number"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.editar-perfil-form label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.editar-perfil-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.guardar-btn, .cancelar-btn {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #E16A54;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.guardar-btn:hover, .cancelar-btn:hover {
+  background-color: #d55d49;
+}
+
+/* Media query para pantallas grandes */
+@media (min-width: 768px) {
+  .editar-perfil-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .editar-perfil-botones {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .guardar-btn, .cancelar-btn {
+    width: auto;
   }
 }

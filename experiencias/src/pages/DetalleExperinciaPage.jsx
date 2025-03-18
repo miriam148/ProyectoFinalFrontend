@@ -3,6 +3,34 @@ import {useState, useEffect } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
 
 
+//DESDE ESTA PAGINA MUESTRO LA EXPERIENCIA POR EL ID Y PUEDO ELIMINAR SI SOY LA CREADORA Y EDITAR SI SOY LA CREADORA 
+
+
+// const apiUrl = "http://localhost:3001/api/auth/refresh-token"
+
+// async function renovarToken() {
+//   const refreshToken = localStorage.getItem("refreshToken")
+//   if (!refreshToken) return null;
+
+//   try {
+//     const response= await fetch(apiUrl, {
+//       method: "POST",
+//       headers: {"Content-Type": "application/json"},
+//       body: JSON.stringify({refreshToken})
+//     });
+//     if (!response.ok) throw new Error("imposible acceder refresh token");
+//     const data= await response.json();
+//     localStorage.setItem("token", data.accessToken)
+//     return data.accessToken
+//   } catch (error) {
+//     console.log("error")
+    
+//   }
+   
+
+
+// }
+
 const DetalleExperinciaPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -29,8 +57,26 @@ useEffect(() => {
           headers: {
             "Content-Type": "application/json",
             "auth-token": token, //Enviar el token
+          
           },
         });
+
+        // if (response.status === 401 || response.status === 403) {
+        //   console.log("token expirado")
+        // };
+        // const refresToken = await renovarToken()
+        // if (!refresToken) {
+        //   console.log("no hay token ")
+        // }
+        // response = await fetch(`http://localhost:3001/api/experience/${id}`, {   
+        //   method: "GET",
+        //   headers: {
+        //     "Content-Type": "application/json",
+        //     "auth-token": refresToken, //Enviar el token
+          
+        //   },
+        // })
+        //   if(!response.ok) throw new Error("error")
   
         const data = await response.json();
         setExperiencia(data);
@@ -45,14 +91,14 @@ useEffect(() => {
   }, [id]);
   
 
- //eliminar  experiencia
+ //eliminar  experiencia (SOLO LOS CREADORES DE LA EXPERIENCIA PUEDEN BORRAR)
  const handleDelete = async () => {
     try {
       const token = localStorage.getItem("token")  
       if (!token) {
         setError('Solo puedes eliminar tus experiencias')
       }
-      const response = await fetch(`http://localhost:3001/api/experience/${id}`, {
+      const response = await fetchWithRefresh(`http://localhost:3001/api/experience/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",
