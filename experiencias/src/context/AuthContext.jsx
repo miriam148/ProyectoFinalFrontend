@@ -2,11 +2,14 @@ import { createContext, useState, useEffect } from "react";
 
 export const AuthContext = createContext(); 
 
-/*CON EL CONTEXTO GLOBAL DE AUTHCONTEXT ALMACENO LOS DATOS DEL USUARIO Y LOS TOKENS */
+/*CON EL CONTEXTO GLOBAL DE AUTHCONTEXT ALMACENO LOS DATOS DEL USUARIO Y EL TOKEN  */
 
-const AuthProvider = ({ children }) => { //TODOS LOS COMP DENTRO DE AUTHP
+const AuthProvider = ({ children }) => { //TODOS LOS COMPONENTES DENTRO DE AUTHPROVIDER, ENVUELVE TODO Y ASI LO PUEDO USAR EN TODOS ELLOS
   const [user, setUser] = useState(null); //guarda y actualiza
   const [token, setToken] = useState(null);//guarda y actualiza
+/*TOKEN SE USA EN CADA REQUEST ASI QUE LO METEMOS EN ESTADO GLOBAL O LUGAR DE FACIL ACCESO Y LO ACTUALIZAMOS CUANDO SE RENUEVE
+TOKEN REFRESH no es necesario hacer USESTATE, mejor se guarda en localStorage o cookie seguro)*/ 
+
 
 /*con este useEffect cada vez que recargamos la app no necesitamos logearnos si ya estabamos antes pq si hay datos en localStorage
 guardamos en user y token. solo para mantener la sesion abierta, pq gestionamos globalmente la autenticacion no pq este la funcion de login

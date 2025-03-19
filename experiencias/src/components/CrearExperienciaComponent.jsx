@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../style.css";
 import { AuthContext } from "../context/AuthContext";
 
+
 const CrearExperienciaComponent = () => {
   const {token} = useContext(AuthContext)
   const [formData, setFormData] = useState({
@@ -94,7 +95,7 @@ const CrearExperienciaComponent = () => {
         {error && <p className="error-message">{error}</p>}
 
         <div className="botones-container">
-          <button type="submit" className="crear-btn"> Crear</button>
+          <button type="submit" className="crear-btn">✍Crear</button>
           <button type="button" className="volver-btn" onClick={() => navigate(-1)}>⬅ Cancelar</button>
         </div>
       </form>

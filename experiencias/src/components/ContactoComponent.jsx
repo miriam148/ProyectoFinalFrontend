@@ -17,10 +17,10 @@ const navigate = useNavigate()
       </p>
 <div className="iconos-container">
 <a href="https://www.linkedin.com/in/miriam-ib%C3%A1%C3%B1ez-mu%C3%B1oz-983864283/" target="_blank" rel="noopener noreferrer">
-        <img src="/images/linkedin.png" alt="Linkedin" width="30" height="30"/>
+        <img src="/images/linkedin.png" alt="Linkedin" width="32" height="32"/>
       </a>
-<a href="tel:655181239" target="_blank" rel="noopener noreferrer">
-  <img src="/images/telefono.png" alt="Teléfono" width="30" height="30" />
+<a className="icon-phone" href="tel:655181239" target="_blank" rel="noopener noreferrer">
+  <img src="/images/telefono.png" alt="Teléfono" width="25" height="22" />
 </a>
       <a href="https://github.com/miriam148" target="_blank" rel="noopener noreferrer">
         <img src="/images/github.png" alt="GitHub" width="30" height="30"  />

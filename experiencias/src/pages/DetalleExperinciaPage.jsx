@@ -98,7 +98,7 @@ useEffect(() => {
       if (!token) {
         setError('Solo puedes eliminar tus experiencias')
       }
-      const response = await fetchWithRefresh(`http://localhost:3001/api/experience/${id}`, {
+      const response = await fetch(`http://localhost:3001/api/experience/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json",

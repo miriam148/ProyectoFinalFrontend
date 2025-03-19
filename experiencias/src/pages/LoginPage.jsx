@@ -24,12 +24,19 @@ const LoginPage = () => {
       });
 
       const data = await response.json();
+      console.log("➡️ Respuesta del backend (login):", data);//comprobando refreshtoken desde el frontend
+
 
       if (!response.ok) { //manejo de errores
         throw new Error(data.message || "Error en el inicio de sesión");
       }
 //login viene de authContext
       login(data.user, data.token, data.token_refresh); //console.log(data.token) Guardar usuario con los dos token 
+      console.log("📥 Guardado en localStorage: ");//comprobacion los 4
+console.log("token:", localStorage.getItem("token"));
+console.log("refreshToken:", localStorage.getItem("refreshToken"));
+console.log("user:", localStorage.getItem("user"));
+
       navigate("/home"); // Redirigir a Home después de iniciar sesión
     } catch (error) {
       setError(error.message);
