@@ -13,60 +13,19 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+
+
+ 
+ body, html {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
-}
+} 
 
 
 
 
-/* Estilos para LandingPage */
-/* .landing-container {
-    max-width: 90%;
-    margin: auto;
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .landing-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
-  }
-  
-  .btn-primary, .btn-secondary {
-    padding: 12px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn-primary {
-    background-color:  #626F47;
-    color: white;
-  }
-  
-  .btn-secondary {
-    background-color: #626F47;
-    color: white;
-  }
-  
-  /* Media Query para pantallas más grandes */
-  /* @media (min-width: 768px) {
-    .landing-buttons {
-      flex-direction: row;
-      justify-content: center;
-    }
-  
-    .btn-primary, .btn-secondary {
-      width: 200px;
-    }
-  } */ 
 
 
 
@@ -733,3 +692,4 @@ html, body {
     width: auto;
   }
 }
+
