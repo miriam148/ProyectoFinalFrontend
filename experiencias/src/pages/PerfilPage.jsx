@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate, useParams } from "react-router-dom";
 import "../style.css";
+import CambiarFotoPerfil from "../components/CambiarFotoPerfil";
 
 const PerfilPage = () => {
   const { id } = useParams();
@@ -66,6 +67,8 @@ const PerfilPage = () => {
   return (
     <div className="perfil-container">
       <h1>Mi Perfil</h1>
+      <CambiarFotoPerfil/> 
+
       <p><strong>Nombre:</strong> {perfil.name}</p>
       <p><strong>Email:</strong> {perfil.email}</p>
       <p><strong>Fecha de nacimiento:</strong> {new Date(perfil.birthdate).toLocaleDateString()}</p>
@@ -77,6 +80,7 @@ const PerfilPage = () => {
         <button onClick={handleDelete} className="eliminar-btn">🗑️ Eliminar Perfil</button>
         <button onClick={handlerBack} className="volver-btn">⬅ Volver</button>
       </div>
+    
     </div>
   );
 };

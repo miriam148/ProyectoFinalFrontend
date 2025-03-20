@@ -333,11 +333,9 @@
   margin: auto;
   text-align: center;
   padding: 40px 20px;
+  color: #A87676
 }
 
-.crear-experiencia-container h1 {
-  color: #A59D84
-}
 
 /* Estilo del formulario */
 .crear-experiencia-form {
@@ -351,7 +349,7 @@
 .crear-experiencia-form input,
 .crear-experiencia-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -574,6 +572,7 @@
 .perfil-container {
   padding: 20px;
   text-align: center;
+  color: #A87676
 }
 
 .perfil-container h1 {

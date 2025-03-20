@@ -11,7 +11,7 @@ const navigate = useNavigate()
   }
   return (
     <div className="contacto-container">
-      <h1>Contacto</h1>
+      {/* <h1>Contacto</h1> */}
       <p>
         <strong>Miriam Ibáñez Muñoz</strong> 
       </p>
