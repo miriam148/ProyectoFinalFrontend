@@ -10,18 +10,24 @@ const CrearExperienciaComponent = () => {
     title: "",
     description: "",
     location: "",
-    image: "",
+    image: null, //aqui ahora metemos el archivo en lo que antes era un string
   });
 
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // Función para manejar cambios en los inputs
+  // Función para manejar cambios en los inputs de texto
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Función para enviar el formulario
+ // Maneja la selección del archivo
+ const handleFileChange = (e) => {
+  setFormData({ ...formData, image: e.target.files[0] });
+};
+
+
+  // Función para enviar el formulario (AQUÍ CAMBAIMOS )
   // console.log(token);
 
   const handleSubmit = async (e) => {
@@ -29,19 +35,29 @@ const CrearExperienciaComponent = () => {
     setError(null);
 
     try {
-      const token = localStorage.getItem("token"); 
+      // const token = localStorage.getItem("token"); //voy a probar si tiene algo que ver con el refresh token!!!!!, asi estoy utilizando el useState!!!! con esto descomentado no!!!!
       if (!token) {
         setError('Inicia sesión para crear una experiencia')
         return
       }
 
+  // Creamos el FormData para enviar datos + archivo
+  const dataToSend = new FormData();
+  dataToSend.append("title", formData.title);
+  dataToSend.append("description", formData.description);
+  dataToSend.append("location", formData.location);
+  dataToSend.append("image", formData.image); // Aquí va el archivo
+
+
+
+
       const response = await fetch("http://localhost:3001/api/experience", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          // "Content-Type": "application/json",(YA SOLO SE GESTIONA CON FORMDATA )
           "auth-token": token,
         },
-        body: JSON.stringify(formData),
+        body: dataToSend, //no usamos json
       });
 
       const data = await response.json();
@@ -56,6 +72,9 @@ const CrearExperienciaComponent = () => {
       setError(error.message);
     }
   };
+
+
+
 
   return (
     <div className="crear-experiencia-container">
@@ -85,11 +104,11 @@ const CrearExperienciaComponent = () => {
           required
         />
         <input
-          type="text"
+          type="file"
           name="image"
-          placeholder="URL de la imagen (opcional)"
-          value={formData.image}
-          onChange={handleChange}
+          
+          accept="image/*"
+          onChange={handleFileChange}
         />
         
         {error && <p className="error-message">{error}</p>}

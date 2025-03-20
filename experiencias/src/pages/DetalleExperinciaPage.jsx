@@ -137,7 +137,15 @@ useEffect(() => {
       <p><strong>Ubicación:</strong> {experiencia.location}</p>
       <p>{experiencia.description}</p>
       <p><strong>Fecha:</strong> {new Date(experiencia.date).toLocaleDateString()}</p>
-      {experiencia.image && <img src={experiencia.image} alt={experiencia.title} className="detalle-img" />}
+
+      {experiencia.image && (
+  <img
+    src={`http://localhost:3001/${experiencia.image}`}
+    alt={experiencia.title}
+    className="detalle-img"
+  />
+)}
+
       
      {experiencia.user && <p><strong>Publicado por:</strong> {experiencia.user.name || "Usuario desconocido"}</p>}
       

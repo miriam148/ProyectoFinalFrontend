@@ -8,7 +8,7 @@ const HomePage = () => {
   return (
     <div className="home-container">
       <h1>El viaje de tu vida</h1>
-      <p>Elige una opción:</p>
+      <p>¡Disfruta de las vueltas de la vida!</p>
 
       <div className="home-buttons">
         <button onClick={() => navigate("/experiencias")}>📸 Ver experiencias</button>

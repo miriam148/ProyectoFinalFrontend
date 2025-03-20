@@ -5,12 +5,13 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #F2E2B1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ 
 }
 
 
@@ -23,7 +24,12 @@
   overflow-y: auto;
 } 
 
-
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
 
 
 
@@ -43,13 +49,13 @@
   
   .landing-container h1 {
     font-size: 28px;
-    color: #FADA7A;
+    color: #727D73;
     margin-bottom: 10px;
   }
   
   .landing-container p {
     font-size: 18px;
-    color: #FFF7D1;
+    color: #AAB99A;
   }
   
 
@@ -62,6 +68,9 @@
     margin: 50px auto;
     padding: 20px;
     text-align: center;
+  }
+  .login-container {
+    color: #5F6F65;
   }
   
   .login-form {
@@ -141,17 +150,18 @@
   }
 }
 
-/* Estilos para HomePage */
+/* ESTILOS HOMEPAGE */
+
 .home-container {
   max-width: 90%;
   margin: auto;
   text-align: center;
   padding: 40px 20px;
-  color: #FADA7A;
+  color: #A59D84;
   
 }
 .home-container p {
-  color: #FFF7D1;
+  color: #BDB395;
 }
 
 .home-buttons {
@@ -193,6 +203,10 @@
   margin: auto;
   text-align: center;
   padding: 40px 20px;
+ 
+}
+.experiencia-container h1 {
+  color: #A59D84
 }
 
 /* Botón de crear experiencia y volver */
@@ -213,6 +227,14 @@
   color: white;
   transition: background 0.3s;
   min-width: 150px;
+}
+
+
+.detalle-img {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 5px;
 }
 
 
@@ -311,6 +333,10 @@
   margin: auto;
   text-align: center;
   padding: 40px 20px;
+}
+
+.crear-experiencia-container h1 {
+  color: #A59D84
 }
 
 /* Estilo del formulario */
