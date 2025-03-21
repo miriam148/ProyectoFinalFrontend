@@ -151,6 +151,7 @@ useEffect(() => {
       
       <div className="botones-container">
         <button className="editar-btn" onClick={handleEdit}>✏️ Editar</button>
+        <button className="cambiar-foto-btn" onClick={() => navigate(`/cambiar-foto/${id}`)}>🖼 Cambiar foto</button>
         <button className="eliminar-btn" onClick={handleDelete}>🗑️ Eliminar</button>
         <button className="cancelar-btn" onClick={handleCancel}>⬅ Cancelar</button>
       </div>
@@ -160,4 +161,8 @@ useEffect(() => {
   
 };
 
+  
+    
+ 
+       
 export default DetalleExperinciaPage

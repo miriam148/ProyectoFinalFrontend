@@ -15,7 +15,7 @@ import DetalleExperinciaPage from "./pages/DetalleExperinciaPage";
 import './App.css';
 import EditarExperienciaPage from "./pages/EditarExperienciaPage";
 import EditarPerfilPage from "./pages/EditarPerfilPage";
-
+import CambiarFotoExperienceComponent from "./components/CambiarFotoExperienceComponent"
 function App() {
   return (
     <Router>
@@ -35,6 +35,7 @@ function App() {
          <Route path="/experiencia/:id" element={<DetalleExperinciaPage/>}/>
          <Route path="/editar-experiencia/:id" element={<EditarExperienciaPage/>}/>
          <Route path="/editar-perfil" element={<EditarPerfilPage/>}/>
+         <Route path="/cambiar-foto/:id" element={<CambiarFotoExperienceComponent/>}/>
 
          </Route>
         

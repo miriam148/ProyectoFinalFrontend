@@ -467,15 +467,19 @@
 }
 
 .botones-container {
-  margin-top: 20px;
+  /* margin-top: -20px; */
+  padding: 5px;
 }
 
-.editar-btn, .eliminar-btn, .cancelar-btn {
-  margin: 5px;
-  padding: 10px 15px;
+.editar-btn, .eliminar-btn, .cancelar-btn, .cambiar-foto-btn {
+  /* margin: 5px;
+  padding: 10px 15px; */
   border: none;
   cursor: pointer;
   font-size: 16px;
+  background-color: #E16A54; 
+  color: white;
+   margin-left: -15px;
 }
 
 .editar-btn { background-color: #E16A54; color: white; }

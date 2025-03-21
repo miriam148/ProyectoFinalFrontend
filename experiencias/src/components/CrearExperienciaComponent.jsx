@@ -4,6 +4,10 @@ import "../style.css";
 import { AuthContext } from "../context/AuthContext";
 
 
+/*AQUÍ CREO LA EXPERIENCIA Y LA IMAGEN TAMBIÉN ( EN LA EDICIÓN  ES DND VOY A SEPARAR LA EDICIÓN 
+DE TEXTO JSON.STRINGIFT()  DE LA EDICION DE IMAGENES POR USAR FORMDATA, ES MEJOR NO MEZCLARLOS)
+*/
+
 const CrearExperienciaComponent = () => {
   const {token} = useContext(AuthContext)
   const [formData, setFormData] = useState({
