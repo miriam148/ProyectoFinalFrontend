@@ -67,7 +67,12 @@ const PerfilPage = () => {
   return (
     <div className="perfil-container">
       <h1>Mi Perfil</h1>
-      <CambiarFotoPerfil/> 
+      <img
+            src={`http://localhost:3001/${user.profilePic}`}
+            alt="Tu foto de perfil"
+            width="150"
+          />
+      {/* <CambiarFotoPerfil/>  */}
 
       <p><strong>Nombre:</strong> {perfil.name}</p>
       <p><strong>Email:</strong> {perfil.email}</p>

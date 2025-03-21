@@ -49,13 +49,13 @@
   
   .landing-container h1 {
     font-size: 28px;
-    color: #727D73;
+    color: #A87676;
     margin-bottom: 10px;
   }
   
   .landing-container p {
     font-size: 18px;
-    color: #AAB99A;
+    color: #A87676;
   }
   
 
@@ -157,11 +157,11 @@
   margin: auto;
   text-align: center;
   padding: 40px 20px;
-  color: #A59D84;
+  color: #A87676;
   
 }
 .home-container p {
-  color: #BDB395;
+  color: #A87676;
 }
 
 .home-buttons {
@@ -276,10 +276,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    
   }
 
   .experiencia-card {
     width: 45%;
+    
   }
 }
 
@@ -651,6 +653,7 @@
 .editar-perfil-container h1 {
   font-size: 24px;
   margin-bottom: 20px;
+  color:  #A87676;
 }
 
 .editar-perfil-form {
@@ -718,3 +721,8 @@
   }
 }
 
+.cambiar-foto-container {
+  margin-bottom: 15px;
+  color: #A87676;
+
+}

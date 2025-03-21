@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 import "../style.css";
+import CambiarFotoPerfil from "../components/CambiarFotoPerfil";
 
 const EditarPerfilPage = () => {
   const { user, logout } = useContext(AuthContext);
@@ -76,6 +77,7 @@ const EditarPerfilPage = () => {
   return (
     <div className="editar-perfil-container">
       <h1>Editar Perfil</h1>
+     <CambiarFotoPerfil/> 
       <form onSubmit={handleSubmit} className="editar-perfil-form">
         <input
           type="text"
