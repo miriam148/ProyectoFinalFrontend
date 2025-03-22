@@ -320,7 +320,6 @@
   padding: 10px;
   background-color: #333;
   color: white;
-  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;
@@ -466,26 +465,38 @@
   border-radius: 5px;
 }
 
+
 .botones-container {
-  /* margin-top: -20px; */
-  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.editar-btn, .eliminar-btn, .cancelar-btn, .cambiar-foto-btn {
-  /* margin: 5px;
-  padding: 10px 15px; */
+.btn-detalle,  .editar-btn, .eliminar-btn, .cancelar-btn, .cambiar-foto-btn {
+  padding: 10px 15px;
+  font-size: 16px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  background-color: #E16A54; 
+  border-radius: 8px;
+  background-color: #E16A54;
   color: white;
-   margin-left: -15px;
+  flex: 1 1 40%; /* Se ajusta automáticamente para móvil */
+  min-width: 120px;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
-.editar-btn { background-color: #E16A54; color: white; }
-.eliminar-btn { background-color: #E16A54; color: white; }
-.cancelar-btn { background-color: #E16A54; color: white; }
+.btn-detalle:hover {
+  background-color: #d55d49;
+}
 
+@media (min-width: 768px) {
+  .btn-detalle {
+    min-width: 150px;
+  }
+}
 
 
 
@@ -495,6 +506,7 @@
   /* padding: px; */
   margin: 0 auto;
   max-width: 400px;
+  color: #A87676;
 
 }
 
@@ -725,8 +737,33 @@
   }
 }
 
+
+/* CAMBIAR FOTO EXPERIENCIA*/
+
+/* .cambiar-foto-btn {
+  background-color: #5e9cff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+}
+.cambiar-foto-btn:hover {
+  background-color: #417ee0;
+} */
+
+
+
 .cambiar-foto-container {
   margin-bottom: 15px;
   color: #A87676;
+  
+
+}
+.cambiar-foto-form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
 
 }

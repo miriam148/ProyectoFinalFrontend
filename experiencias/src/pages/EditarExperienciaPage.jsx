@@ -95,9 +95,6 @@ const EditarExperienciaPage = () => {
         <label>Ubicación:</label>
         <input type="text" name="location" value={experiencia.location} onChange={handleChange} required />
 
-        <label>Imagen (URL opcional):</label>
-        <input type="text" name="image" value={experiencia.image} onChange={handleChange} />
-
         <button type="submit">Guardar Cambios</button>
         <button type="button" onClick={() => navigate(-1)}>Cancelar</button>
       </form>
