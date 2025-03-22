@@ -205,8 +205,8 @@
   padding: 40px 20px;
  
 }
-.experiencia-container h1 {
-  color: #A59D84
+.experiencia-container h1, p {
+  color: #A87676
 }
 
 /* Botón de crear experiencia y volver */
@@ -315,7 +315,7 @@
 }
 
 /*  FOOTER */
-.footer {
+.footer  {
   text-align: center;
   padding: 10px;
   background-color: #333;
@@ -323,6 +323,9 @@
   bottom: 0;
   left: 0;
   width: 100%;
+}
+.footer p {
+  color: white;
 }
 
 
@@ -703,9 +706,10 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.guardar-btn, .cancelar-btn {
+.guardar-btn, .cancelar-btn .cambiar-contraseña {
   padding: 10px 20px;
   border: none;
   cursor: pointer;

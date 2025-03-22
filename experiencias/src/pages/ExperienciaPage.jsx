@@ -48,7 +48,6 @@ const ExperienciaPage = () => {
                 <strong>Ubicación:</strong> {exp.location}
               </p>
               <p>{exp.description}</p>
-              {/* {exp.image && <img src={exp.image} alt={exp.title} className="experiencia-img" />} */}
               <p>
                 <strong>Fecha:</strong>{" "}
                 {new Date(exp.date).toLocaleDateString()}

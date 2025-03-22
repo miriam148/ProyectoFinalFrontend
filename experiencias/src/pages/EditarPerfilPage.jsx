@@ -51,6 +51,10 @@ const EditarPerfilPage = () => {
     }));
   };
 
+  const password = () => {
+    navigate("/cambiar-contraseña")
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -120,6 +124,7 @@ const EditarPerfilPage = () => {
         <div className="editar-perfil-botones">
           <button type="submit" className="guardar-btn">💾 Guardar Cambios</button>
           <button type="button" className="cancelar-btn" onClick={() => navigate("/perfil")}>❌ Cancelar</button>
+          <button type="button" className="guardar-btn" onClick={password}>🔑 Cambiar Contraseña</button>
         </div>
       </form>
     </div>
