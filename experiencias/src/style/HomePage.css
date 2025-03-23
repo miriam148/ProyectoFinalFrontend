@@ -1,0 +1,45 @@
+
+/* ESTILOS HOMEPAGE */
+
+.home-container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 20px;
+    color: #A87676;
+    
+  }
+  .home-container p {
+    color: #A87676;
+  }
+  
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .home-buttons button {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E16A54;
+    color: white;
+  }
+  
+  
+  
+  /* Media Query para pantallas grandes */
+  @media (min-width: 768px) {
+    .home-buttons {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .home-buttons button {
+      width: 200px;
+    }
+  }

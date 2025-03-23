@@ -1,0 +1,91 @@
+
+/* LISTA DE EXPERIENCIAS*/
+
+/* Contenedor principal */
+.experiencia-container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 20px;
+   
+  }
+  .experiencia-container h1, p {
+    color: #A87676
+  }
+  
+  /* Botón de crear experiencia y volver */
+  .botones-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 20px;
+  }
+  .crear-btn,
+  .volver-btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E16A54;
+    color: white;
+    transition: background 0.3s;
+    min-width: 150px;
+  }
+  
+  
+  .detalle-img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  
+  /* Lista de experiencias */
+  .experiencia-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  /* Tarjeta de experiencia */
+  .experiencia-card {
+    background: #FFBF61;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: #758694
+  }
+  
+  /* Botón de detalles */
+  .detalles-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #E16A54;
+    color: white;
+  }
+  
+  
+  
+  /* Media query para pantallas más grandes */
+  @media (min-width: 768px) {
+    .experiencia-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+  
+    .experiencia-card {
+      width: 45%;
+      
+    }
+  }
+  

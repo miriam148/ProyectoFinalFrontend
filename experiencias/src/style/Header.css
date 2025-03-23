@@ -1,0 +1,27 @@
+/*  HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #758694;
+    color: white;
+  }
+  
+  .header h1 {
+    cursor: pointer;
+    font-size: 22px;
+  }
+  
+  .header nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+  
+  .header nav button:hover {
+    text-decoration: underline;
+  }

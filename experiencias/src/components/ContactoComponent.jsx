@@ -1,5 +1,5 @@
 import React from "react";
-import "../style.css";
+import "../style/DetailsScreen.css";
 import { useNavigate } from "react-router-dom";
 
 /* target es para que se abra en otra pantalla y MUY RECOMENDABLE usar rel= noopener noreferrer para evitar ataques y mejora seguridad*/

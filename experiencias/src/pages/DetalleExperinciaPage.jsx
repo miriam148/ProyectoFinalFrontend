@@ -1,7 +1,7 @@
 import React from 'react'
 import {useState, useEffect } from "react" 
 import { useNavigate, useParams } from 'react-router-dom'
-
+import "../style/EditDetail.css"
 
 //DESDE ESTA PAGINA MUESTRO LA EXPERIENCIA POR EL ID Y PUEDO ELIMINAR SI SOY LA CREADORA Y EDITAR SI SOY LA CREADORA 
 

@@ -1,0 +1,25 @@
+
+
+.landing-container {
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .landing-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .landing-container h1 {
+    font-size: 28px;
+    color: #A87676;
+    margin-bottom: 10px;
+  }
+  
+  .landing-container p {
+    font-size: 18px;
+    color: #A87676;
+  }
+  

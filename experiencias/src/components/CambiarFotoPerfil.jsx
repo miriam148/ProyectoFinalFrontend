@@ -1,5 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
+import "../style/ProfilePage.css";
 
 const CambiarFotoPerfil = () => {
   const { token, user, login } = useContext(AuthContext); //actualizar el contexto globañ

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import "../style.css"; 
+// import "../style.css"; 
+import "../style/LandingPage.css"
 
 /*página principal dnd resumidamente explica la app, cada botón te lleva a una página diferente, según si estas registrado te lleva a logearte
  o si no te lleva al registro por eso aqui uso link y no navigate, pq el usuario tiene que clickar, yo no lo redirijo */

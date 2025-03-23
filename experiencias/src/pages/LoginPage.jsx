@@ -2,7 +2,8 @@
 import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext"; // Guarda los datos del usuario y los tokens
-import "../style.css"; 
+// import "../style.css"; 
+import "../style/LoginPage.css"
 
 /* página de inicio de sesión, llamada al servidor con los datos metodo post,  */ 
 const LoginPage = () => {

@@ -1,0 +1,84 @@
+
+/*EditarExperienciaPage*/
+
+.editar-experiencia-container {
+    /* padding: px; */
+    margin: 0 auto;
+    max-width: 400px;
+    color: #A87676;
+  
+  }
+  
+  .editar-experiencia-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .editar-experiencia-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .editar-experiencia-container label {
+    font-weight: bold;
+  }
+  
+  .editar-experiencia-container input,
+  .editar-experiencia-container textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  .editar-experiencia-container textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+  
+  .editar-experiencia-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #E16A54;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editar-experiencia-container button[type="button"] {
+    background-color: #E16A54;
+  }
+  
+  .error-message {
+    color: #F93827;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  
+  /* Media query para pantallas grandes */
+  @media (min-width: 768px) {
+    .editar-experiencia-container {
+      max-width: 600px;
+      padding: 40px;
+    }
+  
+    .editar-experiencia-container h1 {
+      font-size: 2.2rem;
+    }
+  
+    .editar-experiencia-container input,
+    .editar-experiencia-container textarea {
+      font-size: 1.1rem;
+    }
+  
+    .editar-experiencia-container button {
+      font-size: 1.1rem;
+      padding: 12px;
+    }
+  }
+  

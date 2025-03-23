@@ -1,0 +1,58 @@
+/* CREAR-EXPERIENCIA*/
+
+/* Contenedor principal */
+.crear-experiencia-container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 40px 20px;
+    color: #A87676
+  }
+  
+  
+  /* Estilo del formulario */
+  .crear-experiencia-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .crear-experiencia-form input,
+  .crear-experiencia-form textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .crear-experiencia-form textarea {
+    height: 100px;
+    resize: none;
+  }
+  
+  /* Botones */
+  .botones-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .crear-btn, .volver-btn {
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #E16A54;
+  }
+  
+  
+  /* Estilos de error */
+  .error-message {
+    color: #F93827;
+    font-weight: bold;
+  }

@@ -1,0 +1,70 @@
+
+/* PÁGINA DE PERFIL  */
+
+.perfil-container {
+    padding: 20px;
+    text-align: center;
+    color: #A87676
+  }
+  
+  .perfil-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .perfil-container p {
+    font-size: 16px;
+    margin: 8px 0;
+  }
+  
+  .perfil-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .editar-btn, .eliminar-btn {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editar-btn {
+    background-color: #E16A54;
+    color: white;
+  }
+  
+  .editar-btn:hover {
+    background-color: #E16A54;
+  }
+  
+  .eliminar-btn {
+    background-color: #E16A54;
+    color: white;
+  }
+  
+  .eliminar-btn:hover {
+    background-color: #E16A54;
+  }
+  
+  /* Media query para pantallas más grandes */
+  @media (min-width: 768px) {
+    .perfil-container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  
+    .perfil-botones {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .editar-btn, .eliminar-btn {
+      width: auto;
+    }
+  }
+  

@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import "../style.css";
+import "../style/ProfileEditPage.css";
 import CambiarFotoPerfil from "../components/CambiarFotoPerfil";
 
 const EditarPerfilPage = () => {

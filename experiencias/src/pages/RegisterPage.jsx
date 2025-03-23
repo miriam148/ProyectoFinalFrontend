@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../style.css";
+// import "../style.css";
+import "../style/Registerpage.css"
 
 const RegisterPage = () => {
   //todas las variables de estado de los campos de los input para el manejo

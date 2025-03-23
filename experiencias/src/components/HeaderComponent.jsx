@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-import "../style.css";
+import "../style/Header.css";
 
 const HeaderComponent = () => {
   const { user, logout } = useContext(AuthContext);
