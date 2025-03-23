@@ -86,14 +86,21 @@
   
   
   .cambiar-foto-container {
-    margin-bottom: 15px;
-    color: #A87676;
-    
-  
-  }
-  .cambiar-foto-form {
+    /* display: flex;
+    align-items: center; */
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
+    margin-bottom: 50px;
+    color: #A87676;
+    padding: 20px;
   
+  }
+
+  @media (min-width: 768px) {
+    .cambiar-foto-container {
+      max-width: 600px;
+      margin: 0 auto; /* Esto lo centra */
+      align-items: center;
+      text-align: center;
+    }
   }
