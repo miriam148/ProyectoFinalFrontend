@@ -10,8 +10,8 @@ const HeaderComponent = () => {
   const handleLogout = () => {
     logout()
     setTimeout(() => navigate("/"), 0); /*no me funciona solo con navigate, pq a react no le da tiempo a limpiar todo  cuando hago logout
-    y no me llevaba a la principal, con setTimeout le estamos diciendo que se espere a que se limpie y ejecuta navigate 
-     */
+    y no me llevaba a la principal, con setTimeout le estamos diciendo que se espere a que se limpie y ejecuta navigate */
+     
   }
 
   return (

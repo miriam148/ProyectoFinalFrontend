@@ -1,11 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../style/ProfilePage.css";
-import CambiarFotoPerfil from "../components/CambiarFotoPerfil";
+
 
 const PerfilPage = () => {
-  const { id } = useParams();
   const { user, logout } = useContext(AuthContext);
   const [perfil, setPerfil] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -72,7 +71,6 @@ const PerfilPage = () => {
             alt="Tu foto de perfil"
             width="150"
           />
-      {/* <CambiarFotoPerfil/>  */}
 
       <p><strong>Nombre:</strong> {perfil.name}</p>
       <p><strong>Email:</strong> {perfil.email}</p>
