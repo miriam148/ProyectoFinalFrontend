@@ -120,7 +120,7 @@ useEffect(() => {
 
   //  cancela y vuelves atrás
   const handleCancel = () => {
-    navigate(-1);
+    navigate("/experiencias");
   };
 
   //  mensaje mientras carga
