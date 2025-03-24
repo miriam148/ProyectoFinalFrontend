@@ -86,8 +86,7 @@
   
   
   .cambiar-foto-container {
-    /* display: flex;
-    align-items: center; */
+   
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
@@ -99,7 +98,7 @@
   @media (min-width: 768px) {
     .cambiar-foto-container {
       max-width: 600px;
-      margin: 0 auto; /* Esto lo centra */
+      margin: 0 auto; 
       align-items: center;
       text-align: center;
     }

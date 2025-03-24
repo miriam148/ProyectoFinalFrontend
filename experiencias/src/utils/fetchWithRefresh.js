@@ -1,5 +1,5 @@
 
-//probando pq no me sirve el refresh token
+//probando pq no me sirve el refresh token(No borro este código aunque no lo esté utilizando por cuestión de tiempo, quiero seguir investigando pq no me funciona REFRESH TOKEN)
 //SIGUE SIN FUNCIONAR, DEL BACK NO ES PROBLEMA PQ ME DEVUELVE LOS DOS, EL PROBLEMA ESTA EN EL FRONT Y NO ENCUENTRO LA MANERA
 // token a 60 min para que me deje trabajar mas tiempo
 // compruebo en consola y me devuelve desde el back y desde el front los dos token y el usuario. en localstorage esta todo guardado, pero no refrescaaaaa

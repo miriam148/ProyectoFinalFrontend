@@ -34,7 +34,7 @@ git clone https://github.com/miriam148/ProyectoFinalFrontend.git
 
 Accede a la carpeta:
 
-cd ProyectoFinalFrontend
+cd EXPERIENCIAS/experiencias
 
 Instala las dependencias:
 
@@ -70,4 +70,4 @@ Diseño responsivo (mobile first)
 
 📖 Autora
 
-Miriam Ibáñez MuñozGitHub: https://github.com/miriam148
+Miriam Ibáñez Muñoz GitHub: https://github.com/miriam148
