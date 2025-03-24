@@ -39,6 +39,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    color: black
   }
   
   .editar-perfil-botones {

@@ -109,7 +109,7 @@ const RegisterPage = () => {
           required
           className="register-input"
         />
-        <label>
+        <label className="click">
           <input
             type="checkbox"
             checked={isAdventurous}

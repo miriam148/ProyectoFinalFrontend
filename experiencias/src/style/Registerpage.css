@@ -5,6 +5,7 @@
     margin: auto;
     padding: 40px 20px;
     text-align: center;
+    color: #A87676
   }
   
   .register-form {
@@ -23,13 +24,16 @@
   .register-button {
     padding: 12px;
     font-size: 18px;
-    background-color: #626F47;
+    background-color: #A87676;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
+  .click {
+    color: black
+  }
   
   .register-error {
     color: #F93827;
