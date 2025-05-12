@@ -39,11 +39,58 @@ HASTA QUE NO HAGAMOS LOGOUT SEGUIMOS LOGIN*/
     localStorage.removeItem("refreshToken");
     
   };
+
+// ✅ Añadido: fetchConAuth para manejar la expiración del token
+const fetchConAuth = async (url, options = {}) => {
+  let currentToken = localStorage.getItem("token");
+
+  options.headers = {
+    ...(options.headers || {}),
+    "auth-token": currentToken, // en vez de Authorization
+    // No pongas Content-Type si estás usando FormData
+
+    // Authorization: `Bearer ${currentToken}`,
+    // "Content-Type": "application/json"
+  };
+
+  let response = await fetch(url, options);
+
+  // Si el token expiró (401), intenta refrescar
+  if (response.status === 401 || response.status === 400) {
+    const storedRefreshToken = localStorage.getItem("refreshToken");
+
+    const refreshRes = await fetch("http://localhost:3001/api/auth/refresh-token", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ token_refresh: storedRefreshToken })
+    });
+
+    const refreshData = await refreshRes.json();
+
+    if (refreshRes.ok) {
+      // Guardar nuevos tokens
+      setToken(refreshData.token);
+      localStorage.setItem("token", refreshData.token);
+      localStorage.setItem("refreshToken", refreshData.token_refresh);
+
+      // Repetir petición original con nuevo token
+      options.headers.Authorization = `Bearer ${refreshData.token}`;
+      response = await fetch(url, options);
+    } else {
+      // Si el refresh falla, cerrar sesión
+      logout();
+      throw new Error("Sesión expirada. Vuelve a iniciar sesión.");
+    }
+  }
+
+  return response;
+};
+
 //los componentes pueden usar user/token/login/logout... children representa todo lo que este dentro de authcont y 
 // como en main.jsx lo he envuelto entero a la app...SIN LOS CHILDREN authprovider no podria envolver app y los componentes no tendrian acceso a authContext
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}> 
+    <AuthContext.Provider value={{ user, token, login, logout, fetchConAuth }}> 
       {children}
     </AuthContext.Provider>
   );
